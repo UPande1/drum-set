@@ -2,8 +2,9 @@ var len = document.querySelectorAll(".drum").length;
 
 for (var i=0; i<=len; i++) {
   document.addEventListener("keydown", function(event) {
-
+      
       var buttonInnerHTML = event.key;
+      buttonAnimation(event.key);
       switch (buttonInnerHTML) {
         case "w":
         var tom1 = new Audio("sounds/tom-1.mp3");
@@ -37,12 +38,12 @@ for (var i=0; i<=len; i++) {
 
       }
 
-
-
-
-
-
   });
-
+      function buttonAnimation(currentKey) {
+        var activeButton = document.querySelector(".' + currentKey) {
+              activeButton.classList.add("pressed");
+        setTimeOut(function() {
+          activeButton.classList.remove("pressed");
+        }, 100);
 
 }

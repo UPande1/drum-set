@@ -4,7 +4,7 @@ for (var i=0; i<=len; i++) {
   document.addEventListener("keydown", function(event) {
       
       var buttonInnerHTML = event.key;
-      buttonAnimation(event.key);
+      buttonAnimation(buttonInnerHTML);
       switch (buttonInnerHTML) {
         case "w":
         var tom1 = new Audio("sounds/tom-1.mp3");
